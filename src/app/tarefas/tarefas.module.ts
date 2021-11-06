@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TarefaService } from './shared';
 import { ListarTarefaComponent } from './components/listagem/listar-tarefa.component';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -10,7 +12,9 @@ import { ListarTarefaComponent } from './components/listagem/listar-tarefa.compo
     ListarTarefaComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
+    FormsModule
   ],
   providers: [
     TarefaService
