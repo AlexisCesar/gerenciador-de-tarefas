@@ -39,7 +39,7 @@ export class TarefaService {
 
   remover(id:number): void {
     let tarefas:Tarefa[] = this.listarTodos();
-    tarefas.filter(tarefa => tarefa.id !== id);
+    tarefas = tarefas.filter(tarefa => tarefa.id !== id);
     localStorage['tarefas'] = JSON.stringify(tarefas);
   }
 
