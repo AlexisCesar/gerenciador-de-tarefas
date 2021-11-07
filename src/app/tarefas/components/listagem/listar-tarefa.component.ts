@@ -28,4 +28,9 @@ export class ListarTarefaComponent implements OnInit {
     }
   }
 
+  alterarEstado(tarefa: Tarefa): void {
+    this.tarefaService.alterarStatus(tarefa.id);
+    this.tarefas = this.listarTodos();
+  }
+
 }
